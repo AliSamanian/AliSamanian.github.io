@@ -6,96 +6,105 @@
 <link rel="icon" type="image/svg+xml" href="assets/as-logo.svg">
 <title>Ali Samanian — Computer Engineer · Machine Learning &amp; Computer Vision</title>
 <meta name="description" content="Computer Engineering graduate from the University of Tehran working on machine learning, computer vision and software engineering.">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
-:root{--bg:#0b0f19;--card:#111827;--line:#1f2a44;--text:#c9d3ea;--muted:#8b97b5;--head:#f1f5ff;--a:#2f81f7;--a2:#7aa2f7;--a3:#bb9af7}
+:root{--bg:#0b0f19;--card:#111827;--line:#1f2a44;--text:#c9d3ea;--muted:#8b97b5;--head:#f1f5ff;--a:#2f81f7;--a2:#7aa2f7;--a3:#bb9af7;--g1:rgba(47,129,247,.18);--g2:rgba(187,154,247,.10);--chip:#0e1526;--ph:#0e1526;--float:rgba(17,24,39,.9);--sh:rgba(0,0,0,.35);--nbg1:rgba(30,41,70,.55);--nbg2:rgba(8,12,24,.55);--nbd:rgba(122,162,247,.22);--nhl:rgba(255,255,255,.12);--nsh:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.45),inset 0 0 24px rgba(47,129,247,.07),0 14px 44px rgba(0,0,0,.6);--pop:rgba(14,20,36,.94)}
+[data-theme="light"]{--bg:#f3f6fd;--card:#ffffff;--line:#d8e0f1;--text:#41506b;--muted:#64748b;--head:#0f172a;--a:#2563eb;--a2:#2f6fe0;--a3:#8b5cf6;--g1:rgba(47,129,247,.16);--g2:rgba(139,92,246,.10);--chip:#eef3ff;--ph:#e6edfb;--float:rgba(255,255,255,.92);--sh:rgba(30,60,120,.16);--nbg1:rgba(255,255,255,.72);--nbg2:rgba(232,240,255,.55);--nbd:rgba(255,255,255,.9);--nhl:rgba(255,255,255,.8);--nsh:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(30,60,120,.08),0 12px 36px rgba(30,60,120,.18);--pop:rgba(255,255,255,.96)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{background:radial-gradient(900px 500px at 80% -10%,rgba(47,129,247,.18),transparent 60%),radial-gradient(700px 400px at -10% 30%,rgba(187,154,247,.10),transparent 60%),var(--bg);color:var(--text);font:16px/1.65 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--a2);text-decoration:none}a:hover{color:#fff}
+body{background:radial-gradient(900px 500px at 80% -10%,var(--g1),transparent 60%),radial-gradient(700px 400px at -10% 30%,var(--g2),transparent 60%),var(--bg);color:var(--text);font:16px/1.65 "Segoe UI",Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background-color .3s,color .3s}
+a{color:var(--a2);text-decoration:none}a:hover{color:var(--head)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-.logo{font-weight:700;color:var(--head);letter-spacing:.3px}.logo span{color:var(--a)}
-.hero{padding:110px 0 80px}
+.logo{font-weight:700;color:var(--head);letter-spacing:.3px}
+.hero{padding:70px 0 80px}
 .tag{display:inline-block;font:13px ui-monospace,Consolas,monospace;color:var(--a2);border:1px solid var(--line);background:rgba(47,129,247,.08);padding:5px 12px;border-radius:99px;margin-bottom:22px}
-h1{font-size:clamp(40px,7vw,68px);line-height:1.08;color:var(--head);letter-spacing:-1.5px}
+h1{font-size:clamp(36px,7vw,68px);line-height:1.08;color:var(--head);letter-spacing:-1.5px}
 h1 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{max-width:640px;margin:22px 0 32px;font-size:18px;color:var(--muted)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--head);background:var(--card);transition:.2s}
 .btn:hover{border-color:var(--a);transform:translateY(-2px);box-shadow:0 8px 24px rgba(47,129,247,.2)}
-.btn.p{background:linear-gradient(90deg,var(--a),#5b8def);border-color:transparent;color:#fff}
+.btn.p{background:linear-gradient(90deg,var(--a),#5b8def);border-color:transparent;color:#fff}.btn.p:hover{color:#fff}
 .btn svg{width:18px;height:18px;fill:currentColor}
 section{padding:72px 0}
 h2{font-size:30px;color:var(--head);letter-spacing:-.5px;margin-bottom:8px}
 h2::before{content:"";display:block;width:42px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--a),var(--a3));margin-bottom:14px}
 .sub{color:var(--muted);margin-bottom:34px;max-width:620px}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:.25s;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,var(--a))}
-.card:hover{transform:translateY(-4px);border-color:var(--c,var(--a));box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.card:hover{transform:translateY(-4px);border-color:var(--c,var(--a));box-shadow:0 12px 32px var(--sh)}
 .card h3{color:var(--head);font-size:18px;margin-bottom:4px}
 .meta{font-size:13px;color:var(--muted);margin-bottom:12px}
 .card p,.card li{font-size:15px}.card ul{padding-left:18px;margin-top:8px}.card li{margin-bottom:4px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{font:12.5px ui-monospace,Consolas,monospace;padding:4px 11px;border-radius:99px;border:1px solid var(--line);background:#0e1526;color:var(--a2)}
+.chip{font:12.5px ui-monospace,Consolas,monospace;padding:4px 11px;border-radius:99px;border:1px solid var(--line);background:var(--chip);color:var(--a2)}
 .about{display:grid;gap:36px;grid-template-columns:1.4fr 1fr}
-.about p+p{margin-top:14px}
 .facts{list-style:none}.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:15px}
 .facts li span:first-child{color:var(--muted)}.facts li span:last-child{color:var(--head);text-align:right}
-.skills{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.skills{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(310px,100%),1fr))}
 .skills .card h3{font-size:15px;color:var(--a2);text-transform:uppercase;letter-spacing:1px}
 .contact{text-align:center;padding:90px 0}
 .contact h2::before{margin:0 auto 14px}.contact .sub{margin:0 auto 28px}.contact .btns{justify-content:center}
 footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
-@media(max-width:760px){nav ul{display:none}.about{grid-template-columns:1fr}.hero{padding:70px 0 50px}}
-
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
 .typed{font:17px ui-monospace,Consolas,monospace;color:var(--a2);margin-top:14px;min-height:28px}
 .typed i{display:inline-block;width:9px;height:18px;background:var(--a);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
-.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
-.stats b{display:block;font-size:28px;color:var(--head);letter-spacing:-.5px}.stats span{font-size:13px;color:var(--muted)}
 .portrait{position:relative;justify-self:center}
-.portrait::before{content:"";position:absolute;inset:-30px;background:radial-gradient(circle,rgba(47,129,247,.45),rgba(187,154,247,.18) 55%,transparent 70%);filter:blur(30px);animation:pulse 5s ease-in-out infinite}
-.portrait::before{z-index:0}
+.portrait::before{content:"";position:absolute;z-index:0;inset:-30px;background:radial-gradient(circle,rgba(47,129,247,.45),rgba(187,154,247,.18) 55%,transparent 70%);filter:blur(30px);animation:pulse 5s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(1.08);opacity:.7}}
-/* .ring{position:relative;width:min(320px,72vw);aspect-ratio:4/5;border-radius:34px;padding:3px;background:linear-gradient(135deg,var(--a),var(--a3))} */
 .ring{position:relative;z-index:1;width:min(320px,72vw);aspect-ratio:4/5;border-radius:34px;padding:3px;background:linear-gradient(135deg,var(--a),var(--a3))}
-.ph{position:relative;width:100%;height:100%;border-radius:31px;background:#0e1526;overflow:hidden;display:grid;place-items:center}
+.ph{position:relative;width:100%;height:100%;border-radius:31px;background:var(--ph);overflow:hidden}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.mono{font-size:84px;font-weight:800;letter-spacing:-3px;background:linear-gradient(135deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-/* .float{position:absolute;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:rgba(17,24,39,.9);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite} */
-.float{position:absolute;z-index:3;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:rgba(17,24,39,.9);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite}
+.float{position:absolute;z-index:3;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:var(--float);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite}
 .float.f1{top:34px;left:-34px}.float.f2{bottom:48px;right:-30px;animation-delay:-2s}
 @keyframes bob{50%{transform:translateY(-10px)}}
 .reveal{opacity:0}.reveal.in{opacity:1;animation:up .7s backwards}
 @keyframes up{from{opacity:0;transform:translateY(26px)}}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px}.portrait{order:-1}.float.f1{left:-8px}.float.f2{right:-8px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important}.reveal{opacity:1}}
-
-nav{position:sticky;top:14px;z-index:20;width:min(1040px,calc(100% - 28px));margin:14px auto 0;border-radius:999px;background:linear-gradient(135deg,rgba(30,41,70,.55),rgba(8,12,24,.55));-webkit-backdrop-filter:blur(26px) saturate(170%);backdrop-filter:blur(26px) saturate(170%);border:1px solid rgba(122,162,247,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.45),inset 0 0 24px rgba(47,129,247,.07),0 14px 44px rgba(0,0,0,.6)}
-nav::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(110% 150% at 14% -60%,rgba(255,255,255,.12),transparent 55%),radial-gradient(60% 130% at 100% 160%,rgba(47,129,247,.2),transparent 60%);pointer-events:none}
-nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;height:58px;max-width:none;padding:0 10px 0 26px}
+nav{position:sticky;top:14px;z-index:20;width:min(1040px,calc(100% - 28px));margin:14px auto 0;border-radius:999px;background:linear-gradient(135deg,var(--nbg1),var(--nbg2));-webkit-backdrop-filter:blur(26px) saturate(170%);backdrop-filter:blur(26px) saturate(170%);border:1px solid var(--nbd);box-shadow:var(--nsh)}
+nav::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(110% 150% at 14% -60%,var(--nhl),transparent 55%),radial-gradient(60% 130% at 100% 160%,rgba(47,129,247,.2),transparent 60%);pointer-events:none}
+nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;height:58px;max-width:none;padding:0 9px 0 26px}
+.nr{display:flex;align-items:center;gap:6px}
 nav ul{display:flex;gap:4px;list-style:none;font-size:14px}
-nav ul a{display:block;padding:8px 15px;border-radius:99px;color:#c9d3ea;transition:.2s}
-nav ul a:hover{color:#fff;background:rgba(122,162,247,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+nav ul a{display:block;padding:8px 15px;border-radius:99px;color:var(--text);transition:.2s}
+nav ul a:hover{color:var(--head);background:rgba(122,162,247,.16);box-shadow:inset 0 1px 0 var(--nhl)}
+.ib{width:40px;height:40px;border-radius:50%;border:1px solid var(--nbd);background:rgba(122,162,247,.12);color:var(--head);display:grid;place-items:center;cursor:pointer;transition:.2s}
+.ib:hover{background:rgba(122,162,247,.28);transform:scale(1.06)}
+.ib svg{width:18px;height:18px;fill:currentColor}
+.menu{display:none}
+.sun{display:block}.moon{display:none}[data-theme="light"] .sun{display:none}[data-theme="light"] .moon{display:block}
 .edu{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .gpa{text-align:right}.gpa b{display:block;font-size:56px;line-height:1;letter-spacing:-1.5px;background:linear-gradient(90deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
 .gpa small{font-size:22px;font-weight:600;color:var(--muted);-webkit-text-fill-color:var(--muted)}
 .gpa span{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
-
-.skills{grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
 .sk-list{display:flex;flex-wrap:wrap;gap:20px 14px;margin-top:16px}
 .sk{width:74px;text-align:center}
 .sk .t{width:56px;height:56px;margin:0 auto 8px;border-radius:14px;overflow:hidden;display:grid;place-items:center;transition:.25s}
 .sk .t img{width:100%;height:100%;display:block}
-.sk .t.p{padding:9px;background:#242938}.sk .t.p.w{background:#fff}
+.sk .t.p{padding:9px;background:#242938}.sk .t.p.w{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
 .sk:hover .t{transform:translateY(-5px);box-shadow:0 10px 24px rgba(47,129,247,.35)}
 .sk span{display:block;font-size:12px;line-height:1.3;color:var(--muted)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:44px}.portrait{order:-1}.float.f1{left:-8px}.float.f2{right:-8px}.hero{padding:44px 0 56px}}
+@media(max-width:760px){
+.about{grid-template-columns:1fr}section{padding:52px 0}.contact{padding:64px 0}.wrap{padding:0 18px}
+.menu{display:grid}
+nav ul{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:2px;padding:10px;border-radius:24px;background:var(--pop);border:1px solid var(--nbd);box-shadow:var(--nsh);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+nav.open ul{display:flex}nav ul a{padding:12px 16px;font-size:15px}
+.edu{flex-direction:column;align-items:flex-start}.gpa{text-align:left}.gpa b{font-size:48px}
+.lead{font-size:16.5px}.btn{padding:10px 16px}.card{padding:20px}
+.sk-list{gap:18px 8px}.sk{width:68px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><a class="logo" href="#top">Ali Samanian</a>
-<ul><li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<nav id="nav"><div class="wrap"><a class="logo" href="#top">Ali Samanian</a>
+<div class="nr">
+<ul id="links"><li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="ib" id="th" type="button" aria-label="Switch light/dark mode" title="Switch light/dark mode"><svg class="sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM11 1h2v3h-2zm0 19h2v3h-2zM1 11h3v2H1zm19 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1l1.4-1.4 2.1 2.1-1.4 1.4zM5.6 19.8l-1.4-1.4 2.1-2.1 1.4 1.4zM18.4 6.3l-1.4 1.4-2.1-2.1 1.4-1.4z"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M21 14.5A9 9 0 0 1 9.5 3a9 9 0 1 0 11.5 11.500z"/></svg></button>
+<button class="ib menu" id="mn" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+</div></div></nav>
 
 <header class="hero" id="top"><div class="wrap hero-grid"><div class="hero-text">
 <span class="tag">Computer Engineer · Tehran, Iran</span>
@@ -104,8 +113,8 @@ nav ul a:hover{color:#fff;background:rgba(122,162,247,.16);box-shadow:inset 0 1p
 <p class="lead">Computer Engineering graduate from the University of Tehran, working across machine learning, computer vision and software engineering — from research ideas to practical, well-built systems.</p>
 <div class="btns">
 <a class="btn p" href="mailto:alisamanian75@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5zm2.2.3L12 11.6l7.8-5.8z"/></svg>Get in touch</a>
-<a class="btn" href="https://github.com/AliSamanian"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.100.8 2.200v3.300c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
-<a class="btn" href="https://www.linkedin.com/in/alisamanian/"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.700 2.600 4.700 6V21h-4v-5c0-1.200 0-2.800-1.700-2.800s-2 1.300-2 2.700V21h-4z"/></svg>LinkedIn</a>
+<a class="btn" href="https://github.com/AliSamanian"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/alisamanian/"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>LinkedIn</a>
 </div>
 </div>
 <div class="portrait"><span class="float f1">Machine Learning</span><span class="float f2">Computer Vision</span>
@@ -117,7 +126,6 @@ nav ul a:hover{color:#fff;background:rgba(122,162,247,.16);box-shadow:inset 0 1p
 <div class="about">
 <div>
 <p>I’m a Computer Engineering graduate with a background in software development and research in <b>machine learning</b>, <b>computer vision</b> and <b>AI-assisted learning</b>. I enjoy digging into technical problems, building practical systems and applying computational methods across different domains.</p>
-<br>
 <div class="chips"><span class="chip">Machine Learning</span><span class="chip">Computer Vision</span><span class="chip">Artificial Intelligence</span><span class="chip">Intelligent Systems</span><span class="chip">Bioinformatics</span><span class="chip">Software Engineering</span></div>
 </div>
 <ul class="facts">
@@ -163,102 +171,35 @@ nav ul a:hover{color:#fff;background:rgba(122,162,247,.16);box-shadow:inset 0 1p
 <section id="skills"><div class="wrap">
 <h2>Technical Skills</h2><p class="sub">Tools and technologies I work with.</p>
 <div class="skills">
-<div class="card"><h3>Languages</h3><div class="sk-list"><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=py" alt="Python" loading="lazy"></div><span>Python</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=c" alt="C" loading="lazy"></div><span>C</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" loading="lazy"></div><span>C++</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=java" alt="Java" loading="lazy"></div><span>Java</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=go" alt="Go" loading="lazy"></div><span>Go</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=matlab" alt="MATLAB" loading="lazy"></div><span>MATLAB</span></div><div class="sk"><div class="t p w"><img src="assets/verilog.svg" alt="Verilog HDL" loading="lazy"></div><span>Verilog HDL</span></div></div></div>
-<div class="card"><h3>ML / AI</h3><div class="sk-list"><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" loading="lazy"></div><span>PyTorch</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" loading="lazy"></div><span>TensorFlow</span></div><div class="sk"><div class="t"><img src="assets/keras.svg" alt="Keras" loading="lazy"></div><span>Keras</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn" loading="lazy"></div><span>scikit-learn</span></div><div class="sk"><div class="t p"><img src="assets/numpy.svg" alt="NumPy" loading="lazy"></div><span>NumPy</span></div><div class="sk"><div class="t p w"><img src="assets/pandas.svg" alt="Pandas" loading="lazy"></div><span>Pandas</span></div><div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" loading="lazy"></div><span>OpenCV</span></div></div></div>
-
-<!-- Software Engineering -->
-<div class="card">
-  <h3>Software Engineering</h3>
-  <div class="sk-list">
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=git" alt="Git" loading="lazy">
-      </div>
-      <span>Git</span>
-    </div>
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=spring" alt="Spring Boot" loading="lazy">
-      </div>
-      <span>Spring Boot</span>
-    </div>
-
-    <div class="sk">
-      <div class="t p">
-        <img src="assets/oop.svg" alt="OOP" loading="lazy">
-      </div>
-      <span>OOP</span>
-    </div>
-
-    <div class="sk">
-      <div class="t p">
-        <img src="assets/data-structures.svg" alt="Data Structures" loading="lazy">
-      </div>
-      <span>Data Structures</span>
-    </div>
-
-    <div class="sk">
-      <div class="t p">
-        <img src="assets/software-testing.svg" alt="Software Testing" loading="lazy">
-      </div>
-      <span>Software Testing</span>
-    </div>
-
-  </div>
-</div>
-
-<!-- Embedded Systems & Operating Systems -->
-<div class="card">
-  <h3>Systems & Embedded</h3>
-  <div class="sk-list">
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=arduino" alt="Arduino" loading="lazy">
-      </div>
-      <span>Arduino</span>
-    </div>
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=linux" alt="Linux" loading="lazy">
-      </div>
-      <span>Linux</span>
-    </div>
-
-  </div>
-</div>
-
-<!-- Documentation -->
-<div class="card">
-  <h3>Documentation & Productivity</h3>
-  <div class="sk-list">
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" loading="lazy">
-      </div>
-      <span>LaTeX</span>
-    </div>
-
-    <div class="sk">
-      <div class="t">
-        <img src="https://skillicons.dev/icons?i=md" alt="Markdown" loading="lazy">
-      </div>
-      <span>Markdown</span>
-    </div>
-
-    <div class="sk">
-      <div class="t p w">
-        <img src="assets/microsoft-office.svg" alt="Microsoft Office" loading="lazy">
-      </div>
-      <span>Microsoft Office</span>
-    </div>
-
-  </div>
-</div>
+<div class="card"><h3>Languages</h3><div class="sk-list">
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=py" alt="Python" loading="lazy"></div><span>Python</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=c" alt="C" loading="lazy"></div><span>C</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" loading="lazy"></div><span>C++</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=java" alt="Java" loading="lazy"></div><span>Java</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=go" alt="Go" loading="lazy"></div><span>Go</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=matlab" alt="MATLAB" loading="lazy"></div><span>MATLAB</span></div>
+<div class="sk"><div class="t p w"><img src="assets/verilog.svg" alt="Verilog HDL" loading="lazy"></div><span>Verilog HDL</span></div></div></div>
+<div class="card"><h3>ML / AI</h3><div class="sk-list">
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" loading="lazy"></div><span>PyTorch</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" loading="lazy"></div><span>TensorFlow</span></div>
+<div class="sk"><div class="t"><img src="assets/keras.svg" alt="Keras" loading="lazy"></div><span>Keras</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn" loading="lazy"></div><span>scikit-learn</span></div>
+<div class="sk"><div class="t p"><img src="assets/numpy.svg" alt="NumPy" loading="lazy"></div><span>NumPy</span></div>
+<div class="sk"><div class="t p w"><img src="assets/pandas.svg" alt="Pandas" loading="lazy"></div><span>Pandas</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" loading="lazy"></div><span>OpenCV</span></div></div></div>
+<div class="card"><h3>Software Engineering</h3><div class="sk-list">
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=git" alt="Git" loading="lazy"></div><span>Git</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=spring" alt="Spring Boot" loading="lazy"></div><span>Spring Boot</span></div>
+<div class="sk"><div class="t p"><img src="assets/oop.svg" alt="OOP" loading="lazy"></div><span>OOP</span></div>
+<div class="sk"><div class="t p"><img src="assets/data-structures.svg" alt="Data Structures" loading="lazy"></div><span>Data Structures</span></div>
+<div class="sk"><div class="t p"><img src="assets/software-testing.svg" alt="Software Testing" loading="lazy"></div><span>Software Testing</span></div></div></div>
+<div class="card"><h3>Systems &amp; Embedded</h3><div class="sk-list">
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=arduino" alt="Arduino" loading="lazy"></div><span>Arduino</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=linux" alt="Linux" loading="lazy"></div><span>Linux</span></div></div></div>
+<div class="card"><h3>Documentation &amp; Productivity</h3><div class="sk-list">
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" loading="lazy"></div><span>LaTeX</span></div>
+<div class="sk"><div class="t"><img src="https://skillicons.dev/icons?i=md" alt="Markdown" loading="lazy"></div><span>Markdown</span></div>
+<div class="sk"><div class="t p w"><img src="assets/microsoft-office.svg" alt="Microsoft Office" loading="lazy"></div><span>Microsoft Office</span></div></div></div>
 </div></div></section>
 
 <section class="contact" id="contact"><div class="wrap">
@@ -273,6 +214,11 @@ nav ul a:hover{color:#fff;background:rgba(122,162,247,.16);box-shadow:inset 0 1p
 <footer><div class="wrap">© <span id="y">2026</span> Ali Samanian · Always learning, building, and exploring.</div></footer>
 <script>
 document.getElementById("y").textContent=new Date().getFullYear();
+var root=document.documentElement,nav=document.getElementById("nav"),mn=document.getElementById("mn");
+document.getElementById("th").onclick=function(){var n=root.dataset.theme==="light"?"dark":"light";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+mn.onclick=function(){var o=nav.classList.toggle("open");mn.setAttribute("aria-expanded",o)};
+document.querySelectorAll("#links a").forEach(function(a){a.onclick=function(){nav.classList.remove("open");mn.setAttribute("aria-expanded","false")}});
+document.addEventListener("click",function(e){if(!nav.contains(e.target))nav.classList.remove("open")});
 (function(){var w=["Machine Learning","Computer Vision","Software Engineering","Intelligent Systems"],t=document.getElementById("typed"),i=0,j=0,del=false;
 function tick(){var x=w[i];
 if(!del){j++;t.textContent=x.slice(0,j);if(j===x.length){del=true;return setTimeout(tick,1500)}return setTimeout(tick,70)}
