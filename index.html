@@ -56,12 +56,15 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 .stats b{display:block;font-size:28px;color:var(--head);letter-spacing:-.5px}.stats span{font-size:13px;color:var(--muted)}
 .portrait{position:relative;justify-self:center}
 .portrait::before{content:"";position:absolute;inset:-30px;background:radial-gradient(circle,rgba(47,129,247,.45),rgba(187,154,247,.18) 55%,transparent 70%);filter:blur(30px);animation:pulse 5s ease-in-out infinite}
+.portrait::before{z-index:0}
 @keyframes pulse{50%{transform:scale(1.08);opacity:.7}}
-.ring{position:relative;width:min(320px,72vw);aspect-ratio:4/5;border-radius:34px;padding:3px;background:linear-gradient(135deg,var(--a),var(--a3))}
+/* .ring{position:relative;width:min(320px,72vw);aspect-ratio:4/5;border-radius:34px;padding:3px;background:linear-gradient(135deg,var(--a),var(--a3))} */
+.ring{position:relative;z-index:1;width:min(320px,72vw);aspect-ratio:4/5;border-radius:34px;padding:3px;background:linear-gradient(135deg,var(--a),var(--a3))}
 .ph{position:relative;width:100%;height:100%;border-radius:31px;background:#0e1526;overflow:hidden;display:grid;place-items:center}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .mono{font-size:84px;font-weight:800;letter-spacing:-3px;background:linear-gradient(135deg,var(--a),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-.float{position:absolute;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:rgba(17,24,39,.9);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite}
+/* .float{position:absolute;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:rgba(17,24,39,.9);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite} */
+.float{position:absolute;z-index:3;font:12.5px ui-monospace,Consolas,monospace;padding:7px 14px;border-radius:99px;background:rgba(17,24,39,.9);border:1px solid var(--line);color:var(--a2);backdrop-filter:blur(8px);animation:bob 4s ease-in-out infinite}
 .float.f1{top:34px;left:-34px}.float.f2{bottom:48px;right:-30px;animation-delay:-2s}
 @keyframes bob{50%{transform:translateY(-10px)}}
 .reveal{opacity:0}.reveal.in{opacity:1;animation:up .7s backwards}
